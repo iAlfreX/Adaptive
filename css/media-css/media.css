@@ -1,21 +1,27 @@
 @media screen and (max-width: 1024px) {
   .container {
-    max-width: 949px;
+    max-width: 959px;
   }
 
-  .nav-wrapper {
+  /* Header Section */
+
+  .header-wrapper {
     height: 122px;
+    flex-direction: row-reverse;
   }
 
-  .logo-wrapper {
-    width: 4em;
-    height: 2.4em;
+  .header-wrapper__logo-wrapper {
     position: absolute;
     left: 50%;
     margin-left: -2em;
   }
 
-  .nav-list {
+  .logo-wrapper {
+    width: 4em;
+    height: 2.4em;
+  }
+
+  .nav {
     display: none;
   }
 
@@ -25,84 +31,44 @@
     justify-content: space-between;
   }
 
-  .slider {
-    margin-bottom: 1.2em;
-  }
+  /* Active Burger-menu */
 
-  .slider {
-    height: 461px;
-  }
-
-  .slider-text {
-    font-size: 1em;
-  }
-
-  .descr-section,
-  .heading {
-    margin-bottom: 1.6rem;
-  }
-
-  .heading {
-    font-size: 1.4em;
-  }
-
-  .descr-blocks-wrapper {
-    flex-direction: column;
-  }
-
-  .descr-block {
-    padding: 2.4em;
-    width: 100%;
-  }
-
-  .descr-block:first-child {
-    margin-bottom: 1.6rem;
-  }
-
-  .form-section {
-    padding-bottom: 4em;
-  }
-
-  .form-section .heading {
-    margin-bottom: 1.6rem;
-  }
-
-  .header {
+  .header-section {
     position: absolute;
     z-index: 1;
     background-color: #000;
     width: 100%;
   }
 
-  .header .nav-wrapper {
+  .header-section .header-wrapper {
     height: 316px;
-    padding: 2.4em 0;
-    padding-bottom: 5.55em;
+    padding: 2.4em 0 5.55em;
     align-items: flex-start;
+    flex-direction: row;
   }
 
-  .header .logo path {
+  .header-section .header-wrapper__logo-wrapper path {
     fill: #fff;
   }
 
-  .header .burger-menu {
+  .header-section .burger-menu {
     height: 2.4em;
     justify-content: center;
   }
 
-  .header .burger-menu::after,
-  .header .burger-menu::before {
+  .header-section .burger-menu::after,
+  .header-section .burger-menu::before {
     display: none;
   }
 
-  .header .burger-menu-el {
+  .header-section .burger-menu__line {
     position: relative;
     transition: transform 0.4s ease-out;
     transform: rotate(45deg);
     background-color: #fff;
   }
 
-  .header .burger-menu-el::after {
+  .header-section .burger-menu__line::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -111,19 +77,61 @@
     background-color: #fff;
   }
 
-  .header .nav-list {
-    display: flex;
+  .header-section .nav {
+    display: block;
+    align-self: flex-end;
+    position: relative;
+    left: 50%;
+    margin-left: -10.075em;
   }
 
-  .header .nav-link {
+  .header-section .nav__link {
     color: #fff;
     font-size: 1.2em;
   }
 
-  .header .nav {
-    align-self: flex-end;
-    position: relative;
-    left: 50%;
-    margin-left: -10em;
+  /* Slider Section */
+
+  .slider-section__slider {
+    margin-bottom: 1.2rem;
+  }
+
+  .slider {
+    height: 461px;
+  }
+
+  .slider-section__text {
+    font-size: 1em;
+  }
+
+  /* Description Section */
+
+  .descr-section,
+  .descr-section__title-block,
+  .descr-blocks__item {
+    margin-bottom: 1.6rem;
+  }
+
+  .title-block__heading {
+    font-size: 1.4em;
+  }
+
+  .descr-blocks {
+    flex-direction: column;
+  }
+
+  .descr-block {
+    padding: 2.4em;
+    width: 100%;
+  }
+
+  /* Form Section */
+
+  .form-section {
+    margin-bottom: 4rem;
+  }
+
+  .form-section__title-block {
+    margin-bottom: 1.6rem;
   }
 }

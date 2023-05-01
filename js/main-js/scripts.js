@@ -9,7 +9,7 @@ $(document).ready(function () {
 });
 
 $(window).scroll(function () {
-  var element = $(".event-date");
+  var element = $(".descr-block__date");
   var windowHeight = $(window).height();
 
   element.each(function () {
@@ -40,12 +40,12 @@ $(window).scroll(function () {
 });
 
 var element = document.querySelector("#burger-menu");
-var targetElement = document.querySelector("#header");
+var targetElement = document.querySelector("#header-section");
 
 element.addEventListener("click", function () {
-  if (targetElement.classList.contains("header")) {
-    targetElement.classList.remove("header");
+  if (targetElement.classList.contains("header-section")) {
+    targetElement.classList.remove("header-section");
   } else {
-    targetElement.classList.add("header");
+    targetElement.classList.add("header-section");
   }
 });

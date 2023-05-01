@@ -15,11 +15,18 @@
     <link rel="stylesheet" href="css/media-css/media.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header-section">
       <div class="container">
-        <div class="nav-wrapper">
-          <a href="#" class="logo-wrapper">
-            <svg class="logo" width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header-wrapper">
+          <a href="#" class="logo-wrapper header-wrapper__logo-wrapper">
+            <svg
+              class="logo-wrapper__logo"
+              width="100"
+              height="60"
+              viewBox="0 0 100 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -29,14 +36,14 @@
             </svg>
           </a>
           <nav class="nav">
-            <ul class="nav-list">
-              <li class="nav-item"><a href="#" class="nav-link">gallery</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">history</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">contact us</a></li>
+            <ul class="nav__list">
+              <li class="nav__item list-item"><a href="#" target="_blank" class="nav__link">gallery</a></li>
+              <li class="nav__item list-item"><a href="#" target="_blank" class="nav__link">history</a></li>
+              <li class="nav__item list-item"><a href="#" target="_blank" class="nav__link">contact us</a></li>
             </ul>
           </nav>
-          <div class="burger-menu" id="burger-menu">
-            <span class="burger-menu-el"></span>
+          <div class="burger-menu burger-menu_disabled" id="burger-menu">
+            <span class="burger-menu__line"></span>
           </div>
         </div>
       </div>
@@ -44,12 +51,12 @@
 
     <section class="slider-section">
       <div class="container">
-        <div class="slider">
-          <div class="slider-image"></div>
-          <div class="slider-image"></div>
-          <div class="slider-image"></div>
+        <div class="slider slider-section__slider">
+          <div class="slider__img"></div>
+          <div class="slider__img"></div>
+          <div class="slider__img"></div>
         </div>
-        <p class="slider-text">
+        <p class="slider-section__text">
           Suspendisse potenti. Curabitur in leo non odio hendrerit semper. Morbi id tempor eros. Donec viverra tempor congue.
           Suspendisse quis felis ultricies, egestas tellus non, semper est.Donec congue lorem odio, eu ornare nisl malesuada
           tincidunt. Nullam ac leo est. Donec varius neque vel ex consectetur aliquet. Aliquam venenatis vel tellus non
@@ -60,23 +67,25 @@
 
     <section class="descr-section">
       <div class="container">
-        <h2 class="heading">history</h2>
-        <div class="descr-blocks-wrapper">
-          <div class="descr-block">
-            <p class="descr-text">
-              <span class="event-date">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin
-              libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi
-              consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo
-              tincidunt id. Nulla facilisi.
+        <div class="title-block descr-section__title-block">
+          <h2 class="title-block__heading">history</h2>
+        </div>
+        <div class="descr-blocks">
+          <div class="descr-block descr-blocks__item">
+            <p class="descr-block__text">
+              <span class="descr-block__date">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper
+              sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et
+              nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur
+              leo tincidunt id. Nulla facilisi.
             </p>
           </div>
           <div class="descr-block">
-            <p class="descr-text">
-              <span class="event-date">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus.
-              Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus
-              odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam.
-              Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna.
-              Mauris neque nisi, pharetra ac posuere nec, vehicula non lorem.
+            <p class="descr-block__text">
+              <span class="descr-block__date">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque
+              risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet
+              purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar
+              aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo
+              eget magna. Mauris neque nisi, pharetra ac posuere nec, vehicula non lorem.
             </p>
           </div>
         </div>
@@ -85,10 +94,12 @@
 
     <section class="form-section">
       <div class="container">
-        <h2 class="heading">contact us</h2>
-        <form action="" class="form">
-          <input type="text" class="form-input" maxlength="100" placeholder="type your message here" />
-          <button type="submit" class="form-btn">send</button>
+        <div class="title-block form-section__title-block descr-section__title-block">
+          <h2 class="title-block__heading">contact us</h2>
+        </div>
+        <form action="#" class="form form-section__form">
+          <input type="text" class="form__input" maxlength="100" placeholder="type your message here" />
+          <button type="submit" class="form__btn">send</button>
         </form>
       </div>
     </section>
