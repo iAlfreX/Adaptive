@@ -43,9 +43,19 @@ var element = document.querySelector("#burger-menu");
 var targetElement = document.querySelector("#header-section");
 
 element.addEventListener("click", function () {
-  if (targetElement.classList.contains("header-section")) {
-    targetElement.classList.remove("header-section");
+  if (targetElement.classList.contains("header")) {
+    targetElement.classList.remove("header");
   } else {
-    targetElement.classList.add("header-section");
+    targetElement.classList.add("header");
+  }
+});
+
+var element = document.querySelector("#slider-burger-menu");
+
+element.addEventListener("click", function () {
+  if (targetElement.classList.contains("header")) {
+    targetElement.classList.remove("header");
+  } else {
+    targetElement.classList.add("header");
   }
 });
