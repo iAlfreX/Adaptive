@@ -218,15 +218,23 @@ body {
 }
 
 .btn {
-  padding: 0.65rem 2.95rem;
+  padding: 0.65rem;
+  min-width: 10rem;
+  max-width: 10rem;
   background: #000;
   border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn span {
+  display: block;
+  overflow: hidden;
+  max-height: 34px;
   font-size: 1.4em;
   line-height: 1.2;
   color: #fff;
   text-transform: uppercase;
-  border: none;
-  cursor: pointer;
 }
 
 .btn:hover {
